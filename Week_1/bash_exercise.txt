@@ -1,0 +1,64 @@
+
+## Use this file to document the commands and write the results you get.
+
+
+
+#### 1. Download the data from https://drive.google.com/open?id=1TNZiSaNmcDbZ7fglKY7lPhni3ucD5Qn3
+
+
+#### 2. How many rows does the dataset have?
+
+3 634 468
+
+
+#### 3. Change the delimiter to ";"
+
+sed 's/,/;/g' cast.csv > cast_new.csv
+
+
+#### 4. Output the header into the separate file cast_header.csv and remove it from the data
+
+head -n 1 cast_new.csv > cast_header.csv
+
+ 
+#### 5. How many movies did Pierce Brosnan play in?
+
+58
+
+awk -F ';' '{print $3}' cast_new.csv | sort | uniq -c
+
+
+#### 6. Were there more superman movies or batman movies?
+
+5 superman
+3 batmen
+
+grep -E 'superman|batman' cast_new.csv | sort | uniq -c
+
+
+
+#### 7. How many roles are in this database?
+
+$ cut -d';' -f5 cast_new.csv | sort -u | wc -l
+ 1 509 380
+
+
+#### 8. What is the most often played role?
+
+43218 actor
+21074 actress
+19022 Himself
+11855 Dancer
+10915 Extra
+
+awk -F ';' '{print $5}' cast_new.csv | sort | uniq -c | sort -nr | head -10
+$ cut -d "," -f 5 cast.csv | sort | uniq -c | sort -rn | head -n 3
+
+
+#### 9. What is the most frequent movie name? 
+
+Around the world in 80 days
+
+awk -F ';' '{print $1}' cast_new.csv | sort | uniq -c | sort -nr | head -5
+
+
