@@ -41,6 +41,7 @@ This repository contains all of the assignments completed by Leah for the Lighth
     5. Supervised Learning Challenge
 
 * [Week 6]()
+
     Week 6 was a group Midterm Project, this is it's own Github Repo
 
 * [Week 7](/Week_7)
@@ -50,3 +51,13 @@ This repository contains all of the assignments completed by Leah for the Lighth
     4. PySpark Exercise
     5. Mini-Project 4 - create Loan Prediction model and deploy
 
+* [Week 8](/Week_8)
+    1. Active Learning Exercise
+    2. Image Challenge
+    3. Sentiment Analysis
+    4. Topic Modelling
+    5. Twitter Sentiment Analysis
+
+* [Week 9](/Week_9)
+    1. Quora Mini-Project (NLP)
+    2. Time Series Challenge
